@@ -1,0 +1,66 @@
+[
+    {
+        "name":"Burger",
+        "price":"150",
+        "size":"Medium",
+        "img":"burger.jpg"
+
+    },
+    {
+        "name":"Chilli Potato",
+        "price":"200",
+        "size":"Small",
+        "img":"chillli potato.jpg"
+
+    },
+    {
+        "name":"Veg Sandwich",
+        "price":"95",
+        "size":"Large",
+        "img":"sandwich.jpg"
+
+    },
+    {
+        "name":"Pizza",
+        "price":"289",
+        "size":"Medium",
+        "img":"pizza.webp"
+
+    },
+    {
+        "name":"Momos",
+        "price":"65",
+        "size":"Medium",
+        "img":"momos.jpg"
+
+    },
+    {
+        "name":"Strawberry Mocktail",
+        "price":"125",
+        "size":"Small",
+        "img":"strawberry_mocktail.jpg"
+
+    },
+    {
+        "name":"Cappuccino",
+        "price":"220",
+        "size":"Medium",
+        "img":"cappuccino.jpg"
+
+    },
+    {
+        "name":"Noodles",
+        "price":"160",
+        "size":"Small",
+        "img":"noodles.jpg"
+
+    },
+    {
+        "name":"Paneer",
+        "price":"265",
+        "size":"Small",
+        "img":"paneer.webp"
+
+    }
+
+]

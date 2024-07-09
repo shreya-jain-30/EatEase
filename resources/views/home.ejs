@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/aef1e6093b.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav1" class="nav">
+            <h3>EATWELL</h3>
+        </div>
+        <div id="nav2" class="nav">
+            <a href="#home"><h3>Home</h3></a>
+            <a href="#services"><h3>Services</h3></a>
+            <a href="#"><h3>Offer</h3></a>
+            <a href="#"><h3>Menu</h3></a>
+            <a href="#"><h3>News</h3></a>
+            <a href="#Gallery"><h3>Gallery</h3></a>
+            <a href="#Reservation"><h3>Reservation</h3></a>
+        </div>
+
+    </nav> -->
+    <section id="home">
+        <div id="box">
+            <h1>Welcome To EatEase</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima doloribus est similique optio perferendis, porro vero sunt accusamus voluptatibus beatae quaerat enim tempora debitis ad quidem! Dignissimos, error doloribus placeat saepe repudiandae eum.</p>
+           
+        </div>
+    </section>
+    
+    <h1 class="heading" class="heading_style"> Our Services</h1>
+    <section id="services">
+        <!-- <h1> Our Services</h1> -->
+        <div class="card" id="c1">
+            <img src="./img/catering.png" class="card_img">
+            <h3>Catering</h3>
+            <br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.</p>
+        </div>
+        <div class="card" id="c2">
+            <img src="./img/delivery.jpg" class="card_img">
+            <h3>Bulk Ordering</h3>
+            <br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.</p>
+        </div>
+        <div class="card" id="c3">
+            <img src="./img/pizza2.jpg" class="card_img">
+            <h3>Food Ordering</h3>
+            <br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.</p>
+        </div>
+    </section>
+    <!-- <div class="block">
+        <div class="text">
+            <strong class="numbers" data-number="18"><h1>18</h1></strong>
+            
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </div> -->
+
+    <section id="menu" >
+        <h1 class="heading" class="heading_style">Our Menu </h1>
+        <div class="grid">
+            <% orders.forEach(function(order){ %>
+                <div class="grid-item">
+                    <img src="./img/<%= order.img %>">
+                    <div>
+                        <h3>₹ <%= order.price %> &nbsp <%= order.name %> </h3>
+                        <button class="btn1" data-add="<%= JSON.stringify(order)%>"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    
+                </div>
+            <% }) %>
+            
+            <!-- <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="./img/burger.jpg">
+                <div>
+                    <h3>₹250 &nbsp Veg Burger</h3>
+                    <button class="btn1"><h4>Add &nbsp</h4><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                
+            </div> -->
+
+        </div>
+    </section>
+    <section id="Gallery">
+        <h1 class="heading" class="heading_style"> Gallery </h1>
+        <div id="gscroll">
+            <i class="fa-solid fa-angles-left" id="back"style="color: #2a2d32;"></i>
+            <div id="gallery">
+                <div>
+                    <img src="./img/burger.jpg">
+                    <img src="./img/chillli potato.jpg">
+                    <img src="./img/paneer.webp">
+                </div>
+                <div>
+                    <img src="./img/momos.jpg">
+                    <img src="./img/noodles.jpg">
+                    <img src="./img/pizza3.jpg">
+                </div>
+            </div>
+            <i class="fa-solid fa-angles-left fa-rotate-180" id="next"style="color: #2a2d32;"></i>
+        
+        </div>
+    </section>
+    <!-- <section id="AboutUs"></section>
+        <h1 class="heading" class="heading_style">About Us</h1>
+        <div id="about_box">
+            <div class="about_parts">
+                <h2 class="heading2">Contact Us</h2>
+                <div><i class="fa-solid fa-location-dot"></i>
+                    <h3>Location</h3>
+                </div>
+                <div><i class="fa-solid fa-phone"></i>
+                    <h3>Call +121345689</h3>
+                </div>
+                <div><i class="fa-regular fa-envelope"></i>
+                    <h3>demo@gmail.com</h3>
+                </div>
+                
+            </div>
+            <div class="about_parts">
+                <h2 class="heading2">Eatwell</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Est dolores sunt obcaecati? Magni voluptate officia quasi aspernatur, fugiat veniam
+                         maxime! Tempore nisi </p>
+                </div>
+                <div>
+                    <h4>© 2024 All Rights Reserved By Free Html Templates</h4>
+                </div>
+            </div>
+            <div class="about_parts">
+                <h2 class="heading2">Opening Hours</h2>
+                <div>
+                    Everyday<br><br>
+                    11 AM to 9 PM
+                </div>
+            </div>
+        </div>
+    </section> -->
+<!-- </body>
+</html> -->

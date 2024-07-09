@@ -1,0 +1,21 @@
+<div id="login">
+    <div id="log_form">
+        <form action="/login" method="post">
+            <div class="ip" id="Email">
+                <label><b>E-Mail</b></label><br>
+                <input type="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="ip" id="Pswd">
+                <label><b>Password</b></label><br>
+                <input type="password" placeholder="Password" name="pswd" required>
+            </div>
+            <% if(messages.error) { %>
+                <span class="err"><%= messages.error %></span>
+                <% } %>
+            <div id="choose">
+                <button type="submit" class="btn2">LogIn</button>
+                <a href="/register"><h4 style="color:red;"> &nbsp Don't have account?</h4></a>
+            </div>
+        </form>
+    </div>
+</div>

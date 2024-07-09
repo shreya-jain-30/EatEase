@@ -1,0 +1,71 @@
+<section class="cart">
+
+<% if(session.cart) { %>
+<div class="full-cart">
+    <div id="order">
+        <div class="d1">
+            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <h2>Order Summery</h2>
+        </div>
+        <% for(let ele of Object.values(session.cart.items)){ %>
+            <div id="d2">
+                <img src="./img/<%= ele.item.img %>">
+                <div>
+                    <h3><%= ele.item.name %></h3>
+                    <span><%= ele.item.size %></span>
+                </div>
+                <div><%= ele.qty %></div>
+                <div>₹ <%= ele.item.price * ele.qty%></div>
+            </div>
+        <% } %>
+        <!-- <div id="d2">
+            <img src="./img/burger.jpg">
+            <div>
+                <h3>Burger</h3>
+                <span>Medium</span>
+            </div>
+            <div>1 pcs</div>
+            <div>₹ 150</div>
+        </div>
+        <div id="d2">
+            <img src="./img/burger.jpg">
+            <div>
+                <h3>Burger</h3>
+                <span>Medium</span>
+            </div>
+            <div>1 pcs</div>
+            <div>₹ 150</div>
+        </div> -->
+        <hr>
+        <div id="d3">
+            <div style="margin-top:1rem;">
+                <span style="margin-left: 24rem;">Total Price:</span>
+                <span style="color:red;"> <b>₹<%= session.cart.totalPrice %> </b> </span>
+            </div>
+            <% if(session.passport.user)
+            { %>
+            <div>
+                <form action="/orders" method="post" id="cartform">
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <input type="text" name="address" placeholder="Address">
+                    <button type="submit" class="btn2" ><b>Order Now</b></button>
+                    
+                </form>
+            </div>
+            <% }
+            else{ %>
+                <a href="/login" class="btn3" ><b>Login to continue</b></a>
+            <% } %>
+        </div>
+    </div>
+    
+</div>
+
+<% } else { %>
+<div class="empty-cart">
+    <h2>Cart-Empty😕</h2>
+    <p>You probably haven't ordered anything yet.<br>To order, go to the main page.</p>
+    <img src="./img/empty-cart.svg" id="emptyImg">
+</div>
+<% } %>
+</section>

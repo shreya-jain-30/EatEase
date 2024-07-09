@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/aef1e6093b.js" crossorigin="anonymous"></script>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <script src="./js/script.js"></script>
+    <!-- <link href="lib/noty.css" rel="stylesheet">
+    <script src="lib/noty.js" type="text/javascript"></script> -->
+    
+</head>
+<body id="bodystyle">
+    <script src="./js/app.js"></script>
+    <nav id="navbar">
+        <div id="nav1" class="nav">
+            <h3>EATEASE</h3>
+        </div>
+        <div id="nav2" class="nav">
+            <a href="/"><h3>Home</h3></a>
+            <a href="#services"><h3>Services</h3></a>
+            <a href="#menu"><h3>Menu</h3></a>
+            <a href="#Gallery"><h3>Gallery</h3></a>
+            <a href="#AboutUs"><h3>About Us</h3></a>
+            <!-- <a href="/login"><h3>LogIn</h3></a>
+            <a href="/register"><h3>Register</h3></a> -->
+            <% if(session.passport.user){ %>
+                <form action="/logOut" method="post" id="logout"></form>
+                <a onclick="document.getElementById('logout').submit()" href="#"><h3>LogOut</h3></a>
+                <!-- <a href="/logOut"><h3>LogOut</h3></a> -->
+            <% } else{ %>
+                
+                <a href="/login"><h3>LogIn</h3></a>
+                <a href="/register"><h3>Register</h3></a>
+                
+            <% } %>
+            <a href="/getOrderPage"><h3>Orders</h3></a>
+            <button id="tgl"><div><i class="fa-solid fa-moon"></i></div></button>
+            
+        </div>
+        <a href="/cart" id="nav_btn"><div class="btn2" >
+            <span id="itemCount"><%= session.cart ? session.cart.totalQty : ' ' %></span>
+            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+        </div></a>
+
+    </nav>
+
+    <%- body %>
+    <section id="AboutUs"></section>
+        <h1 class="heading" class="heading_style">About Us</h1>
+        <div id="about_box">
+            <div class="about_parts">
+                <h2 class="heading2">Contact Us</h2>
+                <div><i class="fa-solid fa-location-dot"></i>
+                    <h3>Location</h3>
+                </div>
+                <div><i class="fa-solid fa-phone"></i>
+                    <h3>Call +121345689</h3>
+                </div>
+                <div><i class="fa-regular fa-envelope"></i>
+                    <h3>demo@gmail.com</h3>
+                </div>
+                
+            </div>
+            <div class="about_parts">
+                <h2 class="heading2">EatEase</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Est dolores sunt obcaecati? Magni voluptate officia quasi aspernatur, fugiat veniam
+                         maxime! Tempore nisi </p>
+                </div>
+                <div>
+                    <h4>© 2024 All Rights Reserved By Free Html Templates</h4>
+                </div>
+            </div>
+            <div class="about_parts">
+                <h2 class="heading2">Opening Hours</h2>
+                <div>
+                    Everyday<br><br>
+                    11 AM to 9 PM
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

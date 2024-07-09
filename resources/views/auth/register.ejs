@@ -1,0 +1,25 @@
+<div id="login">
+    <div id="register_form">
+        <form action="/register" method="post">
+            <div class="ip" id="Name">
+                <label><b>Name</b></label><br>
+                <input type="text" placeholder="Your name" name="name" value="<%= messages.name %>" required>
+            </div>
+            <div class="ip" id="Email">
+                <label><b>E-Mail</b></label><br>
+                <input type="email" placeholder="Email" name="email" value="<%= messages.email %>" required>
+            </div>
+            <div class="ip" id="Pswd">
+                <label><b>Password</b></label><br>
+                <input type="password" placeholder="Password" name="pswd" required>
+            </div>
+            <% if(messages.error) { %>
+            <span class="err"><%= messages.error %></span>
+            <% } %>
+            <div id="choose">
+                <button type="submit" class="btn2">Register</button>
+                <a href="/login"><h4 style="color:red;"> &nbsp Already have an account?</h4></a>
+            </div>
+        </form>
+    </div>
+</div>

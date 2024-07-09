@@ -1,0 +1,35 @@
+<!-- <link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="./js/app.js"></script>
+<script src="{{ asset('js/app.js') }}"></script> -->
+
+
+<section class="order_page">
+    <% if(messages.success){ %>
+    <div id="success-alert" role="alert"><p><%= messages.success %></p></div>
+    <% } %>
+    <div class="all_orders">
+        <h3 class="d1">All Orders</h3>
+        <table class="order_table" >
+            <thead>
+                <tr>
+                    <th>Orders</th>
+                    <th>Phone</th>
+                    <th>Addresss</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(orders.length) { orders.forEach((order)=>{  %>
+                <tr>
+                    <td><a href='/customer-order/<%= order._id %>'> <%= order._id %></a></td>
+                    <td><%= order.phone %></td>
+                    <td><%= order.address %></td>
+                    <td><%= moment(order.createdAt).format('hh:mm A') %></td>
+                </tr>
+                <% }) } else{ %>
+                <tr>No orders found</tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</section>

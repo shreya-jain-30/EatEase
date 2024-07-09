@@ -1,0 +1,103 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+head
+  style 
+    include ../public/css/style.css 
+  title Food Delivery
+  script(src='https://kit.fontawesome.com/aef1e6093b.js' crossorigin='anonymous')
+  script
+    include ../public/js/index.js
+    (src='assets/js/script.js')
+nav#navbar
+  #nav1.nav
+    h3 EATWELL
+  #nav2.nav
+    a(href='#home')
+      h3 Home
+    a(href='#services')
+      h3 Services
+    a(href='#')
+      h3 Offer
+    a(href='#')
+      h3 Menu
+    a(href='#')
+      h3 News
+    a(href='#Gallery')
+      h3 Gallery
+    a(href='#Reservation')
+      h3 Reservation
+section#home
+  #box
+    h1 Welcome To Eatwell
+    p
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima doloribus est similique optio perferendis, porro vero sunt accusamus voluptatibus beatae quaerat enim tempora debitis ad quidem! Dignissimos, error doloribus placeat saepe repudiandae eum.
+    button.btn Order Now
+h1.heading  Our Services
+section#services
+  // <h1> Our Services</h1>
+  #c1.card
+    img.card_img(src='/assets/img/catering.png')
+    h3 Catering
+    br
+    p
+      | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.
+  #c2.card
+    img.card_img(src='/assets/img/delivery.jpg')
+    h3 Bulk Ordering
+    br
+    p
+      | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.
+  #c3.card
+    img.card_img(src='/assets/img/pizza2.jpg')
+    h3 Food Ordering
+    br
+    p
+      | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis et eius itaque iure iste labore, ipsam quod voluptatem odit repellendus perferendis, tempore quibusdam sed velit eaque obcaecati magni numquam.
+.block
+  .text
+    strong.numbers(data-number='18')
+      h1 18
+  div
+  div
+  div
+section#Gallery
+  h1.heading  Gallery 
+  #gscroll
+    i#back.fa-solid.fa-angles-left(style='color: #2a2d32;')
+    #gallery
+      div
+        img(src='/assets/img/burger.jpg')
+        img(src='/assets/img/chillli potato.jpg')
+        img(src='/assets/img/paneer.webp')
+      div
+        img(src='/assets/img/momos.jpg')
+        img(src='/assets/img/noodles.jpg')
+        img(src='/assets/img/pizza3.jpg')
+    i#next.fa-solid.fa-angles-left.fa-rotate-180(style='color: #2a2d32;')
+section#Reservation
+  h1.heading Reservation
+  #reserve_box
+    h1 Reserve a Table
+    #res
+      .entry
+        h3#guests Party Size
+        br
+        // <input type="text" placeholder="No. of guests" id="guests">
+        select#guests
+          option 1 guest
+          option 2 guests
+          option 3 guests
+          option 4 guest
+          option 5 guest
+      .entry
+        label#date(for='')
+          h3 Date
+        br
+        input#date(type='text' placeholder='DD/MM/YYYY')
+      .entry
+        label#time(for='')
+          h3 Time
+        br
+        input#time(type='text' placeholder='No. of guests')
+      button(type='submit') Find a Table
+ 
