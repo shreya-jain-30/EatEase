@@ -11,7 +11,4 @@
 Moreover,it allows the Admin to manage all the orders and change its status.<br>
 <b>4.Order Tracking & Maintenance</b><br>
 <b>5.Session Management-</b> Session for each cutomer is well managed and preserved.
-<br>
-<h2>Sceenshots</h2>
 
-![Screenshot (97)](https://github.com/shreya-jain-30/EatEase/assets/163567643/d48eb789-ff2f-433f-98f3-31b547391ce0)
