@@ -23,8 +23,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'/resources/views'));
 // app.use('/contact',express.static(path.join(__dirname,'public')));
 
-
-mongoose.connect(process.url.MONGO_CONNECTION_URL);   // to connect nodejs with mongodb using mongoose
+mongoose.connect(process.env.MONGO_CONNECTION_URL);   // to connect nodejs with mongodb using mongoose
 // ,{
 //   useNewUrlParser : true,
 //   useCreateIndex: true,
